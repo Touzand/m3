@@ -133,7 +133,7 @@ table {
   border-spacing: 0;
 }
 
-body {
-  background: red;
+.title {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */
