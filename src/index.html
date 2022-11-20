@@ -1,19 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor M3</title>
+    <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header>
+      <img src="./img//logo-m3.png" alt="Logo" />
+      <div>icon</div>
+    </header>
 
-<body>
+    <main class="body">
+      <h2>Blusas</h2>
+      <div class="filter-options">
+        <button class="filter-option filter-btn">Filtrar</button>
+        <button class="filter-option order-btn">Ordenar</button>
+      </div>
 
-</body>
-<h1 class="title">Hola mundo loco</h1>
+      <div class="filtrar wrapper">
+        <div class="wrap-header">
+          <h2>Filtrar</h2>
+          <h2 class="wrap-close">x</h2>
+        </div>
+        <div class="wrap-filter-body">
+          <details>
+            <summary>
+              CORES
+            </summary>
+            <div>
+              
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-<script src="bundle.js"></script>
+            </div>
+          </details>
+          <details>
+            <summary>
+              TAMANHOS
+            </summary>
+            <div>
+              
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
+            </div>
+          </details>
+          <details>
+            <summary>
+              FAIXA DE PREÇO
+            </summary>
+            <div>
+              
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="ordenar wrapper">
+        <div class="wrap-header">
+          <h2>Ordenar</h2>
+          <h2 class="wrap-close">x</h2>
+        </div>
+        <div class="wrap-order-body">
+        <button class="wrap-order-option">Mais recente</button>
+        <button class="wrap-order-option">Maior preço</button>
+        <button class="wrap-order-option">Menor preço</button>
+        </div>
+      </div>
+
+      <article class="products-container grid-products">
+        <template id="tmp">
+          <div class="product">
+            <div class="img-prod">
+              <img src="" alt="" />
+            </div>
+            <div class="details-prod">
+              <p></p>
+              <h3></h3>
+              <span></span>
+            </div>
+            <button>COMPRAR</button>
+          </div>
+        </template>
+      </article>
+    </main>
+  </body>
+
+  <script src="bundle.js"></script>
 </html>
