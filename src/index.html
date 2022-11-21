@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <header>
       <img src="./img//logo-m3.png" alt="Logo" />
       <div>icon</div>
@@ -18,8 +19,8 @@
     <main class="body">
       <h2>Blusas</h2>
       <div class="filter-options">
-        <button class="filter-option filter-btn">Filtrar</button>
         <button class="filter-option order-btn">Ordenar</button>
+        <button class="filter-option filter-btn">Filtrar</button>
       </div>
 
       <div class="filtrar wrapper">
@@ -29,66 +30,57 @@
         </div>
         <div class="wrap-filter-body">
           <details>
-            <summary>
-              CORES
-            </summary>
-            <div>
-              
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-            </div>
-          </details>
-          <details>
-            <summary>
-              TAMANHOS
-            </summary>
-            <div>
-              
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-            </div>
-          </details>
-          <details>
-            <summary>
-              FAIXA DE PREÇO
-            </summary>
-            <div>
-              
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-            </div>
+            <summary style="cursor: pointer">Title or Heading</summary>
+            <p>Here comes the collapsible text.</p>
           </details>
         </div>
       </div>
 
       <div class="ordenar wrapper">
-        <div class="wrap-header">
-          <h2>Ordenar</h2>
-          <h2 class="wrap-close">x</h2>
-        </div>
-        <div class="wrap-order-body">
-        <button class="wrap-order-option">Mais recente</button>
-        <button class="wrap-order-option">Maior preço</button>
-        <button class="wrap-order-option">Menor preço</button>
-        </div>
+      <div class="wrap-header">
+      <h2>Ordenar</h2>
+      <h2 class="wrap-close">x</h2>
+      </div>
+      <div class="wrap-order-body">
+      <button class="wrap-order-option recente">Mais recente</button>
+      <button class="wrap-order-option big-price">Maior preço</button>
+      <button class="wrap-order-option low-price">Menor preço</button>
+      </div>
       </div>
 
-      <article class="products-container grid-products">
-        <template id="tmp">
-          <div class="product">
-            <div class="img-prod">
-              <img src="" alt="" />
-            </div>
-            <div class="details-prod">
-              <p></p>
-              <h3></h3>
-              <span></span>
-            </div>
-            <button>COMPRAR</button>
+      <template id="tmp">
+        <div class="product">
+          <div class="img-prod">
+            <img src="" alt="" />
           </div>
-        </template>
-      </article>
+          <div class="details-prod">
+            <p></p>
+            <h3></h3>
+            <span></span>
+          </div>
+          <button>COMPRAR</button>
+        </div>
+      </template>
+
+    <!--<details>-->
+      <!--<summary>-->
+        <!--hola mundo-->
+      <!--</summary>-->
+      <!--<div>-->
+        <!--loco-->
+      <!--</div>-->
+    <!--</details>-->
+
+      <article class="products-container grid-products"></article>
+
+      <button class="carregar-mais">Carregar mais</button>
+
     </main>
+
+    <footer>
+      M3: IMPLANTAÇÃO DE E-COMMERCE VTEX
+    </footer>
+
   </body>
 
   <script src="bundle.js"></script>
