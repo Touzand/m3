@@ -17,7 +17,6 @@ d.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("click", (e) => {
-  e.preventDefault();
   e.stopImmediatePropagation();
 
   if (e.target.matches(".filter-btn")) {
@@ -51,9 +50,10 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".filter-option-header")) {
     e.target.parentNode.classList.toggle("filter-open");
   }
-
-  if (e.target.matches(".checkbox")) {
-    console.log(e.target);
-    colorFilter(e.target);
-  }
 });
+
+document.getElementById('form-color').addEventListener('change', e=>{
+console.log(e.target.name)
+colorFilter(e.target.name)
+})
+

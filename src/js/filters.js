@@ -1,3 +1,5 @@
+import { getProducts } from "./getProducts";
+
 let d = document,
   $productContainer = d.querySelector(".products-container");
 
@@ -58,31 +60,34 @@ export const dataFilter = () => {
   }
 };
 
-export const colorFilter = (input) => {
-  let color = input.getAttribute("data-color");
-  console.log(color);
+export const colorFilter = (color) => {
   let pr = d.querySelectorAll(".product");
+  let arr = [];
 
   for (let i = 0; i < pr.length; i++) {
-    console.log(pr[i].getAttribute("data-color"));
-    pr[i].getAttribute("data-color") === color
-      ? pr[i].classList.remove("filter")
-      : pr[i].classList.add("filter");
+    arr.push(pr[i]);
   }
 
+  console.log(arr);
+  let newArr = arr.filter((prod) => prod.getAttribute("data-color") === color);
+
+  $productContainer.innerHTML = "";
+  for (let i = 0; i < newArr.length; i++) {
+    $productContainer.appendChild(newArr[i]);
+  }
 };
 
-  //let pr = d.querySelectorAll(".product");
-  //let arr = [];
+//let pr = d.querySelectorAll(".product");
+//let arr = [];
 
-  //for (let i = 0; i < pr.length; i++) {
-  //arr.push(pr[i]);
-  //}
+//for (let i = 0; i < pr.length; i++) {
+//arr.push(pr[i]);
+//}
 
-  //arr.sort((a) => {
-  //return a.getAttribute("data-color") === color;
-  //});
+//arr.sort((a) => {
+//return a.getAttribute("data-color") === color;
+//});
 
-  //for (let i = 0; i < arr.length; i++) {
-  //$productContainer.appendChild(arr[i]);
-  //};
+//for (let i = 0; i < arr.length; i++) {
+//$productContainer.appendChild(arr[i]);
+//};
