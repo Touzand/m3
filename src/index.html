@@ -10,7 +10,6 @@
   </head>
 
   <body>
-
     <header>
       <img src="./img//logo-m3.png" alt="Logo" />
       <div>icon</div>
@@ -29,23 +28,66 @@
           <h2 class="wrap-close">x</h2>
         </div>
         <div class="wrap-filter-body">
-          <details>
-            <summary style="cursor: pointer">Title or Heading</summary>
-            <p>Here comes the collapsible text.</p>
-          </details>
+          <div class="filter-option-container cores">
+            <div class="filter-option-header">
+              <h3>CORES</h3>
+              <h3>V</h3>
+            </div>
+            <div class="filter-option-content">
+              <form id="form-cores" accept-charset="utf-8">
+                <div class="color-option">
+                  <span class="checkbox" data-color="Preto"></span>
+                  <input type="checkbox" name="" id="">
+                  <h3>Preto</h3>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="filter-option-container tamanho">
+            <div class="filter-option-header">
+              <h3>TAMANHO</h3>
+              <h3>V</h3>
+            </div>
+            <div class="filter-option-content">
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+
+          <div class="filter-option-container preco">
+            <div class="filter-option-header">
+              <h3>FAIXA DE PREÇO</h3>
+              <h3>V</h3>
+            </div>
+            <div class="filter-option-content">
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="ordenar wrapper">
-      <div class="wrap-header">
-      <h2>Ordenar</h2>
-      <h2 class="wrap-close">x</h2>
-      </div>
-      <div class="wrap-order-body">
-      <button class="wrap-order-option recente">Mais recente</button>
-      <button class="wrap-order-option big-price">Maior preço</button>
-      <button class="wrap-order-option low-price">Menor preço</button>
-      </div>
+        <div class="wrap-header">
+          <h2>Ordenar</h2>
+          <h2 class="wrap-close">x</h2>
+        </div>
+        <div class="wrap-order-body">
+          <button class="wrap-order-option recente">Mais recente</button>
+          <button class="wrap-order-option big-price">Maior preço</button>
+          <button class="wrap-order-option low-price">Menor preço</button>
+        </div>
       </div>
 
       <template id="tmp">
@@ -62,25 +104,21 @@
         </div>
       </template>
 
-    <!--<details>-->
+      <!--<details>-->
       <!--<summary>-->
-        <!--hola mundo-->
+      <!--hola mundo-->
       <!--</summary>-->
       <!--<div>-->
-        <!--loco-->
+      <!--loco-->
       <!--</div>-->
-    <!--</details>-->
+      <!--</details>-->
 
       <article class="products-container grid-products"></article>
 
       <button class="carregar-mais">Carregar mais</button>
-
     </main>
 
-    <footer>
-      M3: IMPLANTAÇÃO DE E-COMMERCE VTEX
-    </footer>
-
+    <footer>M3: IMPLANTAÇÃO DE E-COMMERCE VTEX</footer>
   </body>
 
   <script src="bundle.js"></script>

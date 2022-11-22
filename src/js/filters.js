@@ -43,25 +43,46 @@ export const dataFilter = () => {
 
   for (let i = 0; i < pr.length; i++) {
     arr.push(pr[i]);
-}
+  }
 
-console.log(arr[0].getAttribute("data-date") < arr[1].getAttribute("data-date"))
+  console.log(
+    arr[0].getAttribute("data-date") < arr[1].getAttribute("data-date")
+  );
 
   arr.sort((a, b) => {
-return a.getAttribute("data-date") < b.getAttribute("data-date");
-});
+    return a.getAttribute("data-date") < b.getAttribute("data-date");
+  });
 
   for (let i = 0; i < arr.length; i++) {
     $productContainer.appendChild(arr[i]);
   }
 };
 
-// color - filter
-//
-//forEach(prod=>{
-//let sortArray = [];
-//if( prod.getAttribute('data-price') > ) {
-//prod.classList.remove('filter')
-//rod.classList.add('filter')
-//}
-//})
+export const colorFilter = (input) => {
+  let color = input.getAttribute("data-color");
+  console.log(color);
+  let pr = d.querySelectorAll(".product");
+
+  for (let i = 0; i < pr.length; i++) {
+    console.log(pr[i].getAttribute("data-color"));
+    pr[i].getAttribute("data-color") === color
+      ? pr[i].classList.remove("filter")
+      : pr[i].classList.add("filter");
+  }
+
+};
+
+  //let pr = d.querySelectorAll(".product");
+  //let arr = [];
+
+  //for (let i = 0; i < pr.length; i++) {
+  //arr.push(pr[i]);
+  //}
+
+  //arr.sort((a) => {
+  //return a.getAttribute("data-color") === color;
+  //});
+
+  //for (let i = 0; i < arr.length; i++) {
+  //$productContainer.appendChild(arr[i]);
+  //};

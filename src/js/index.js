@@ -1,16 +1,24 @@
 console.log("Dev m3");
 
-import { bigPriceFilter, dataFilter, lowPriceFilter } from "./filters";
+import {
+  bigPriceFilter,
+  dataFilter,
+  lowPriceFilter,
+  colorFilter,
+} from "./filters";
 import { getProducts } from "./getProducts";
+import { initCheckboxes } from "./chechbox";
 
 const d = document;
 
 d.addEventListener("DOMContentLoaded", () => {
   getProducts();
+  initCheckboxes(document.querySelectorAll(".checkbox"));
 });
 
 document.addEventListener("click", (e) => {
   e.preventDefault();
+  e.stopImmediatePropagation();
 
   if (e.target.matches(".filter-btn")) {
     document.querySelector(".filtrar").classList.add("wrap-open");
@@ -38,5 +46,14 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".recente")) {
     document.querySelector(".ordenar").classList.remove("wrap-open");
     dataFilter();
+  }
+
+  if (e.target.matches(".filter-option-header")) {
+    e.target.parentNode.classList.toggle("filter-open");
+  }
+
+  if (e.target.matches(".checkbox")) {
+    console.log(e.target);
+    colorFilter(e.target);
   }
 });

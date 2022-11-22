@@ -4,6 +4,30 @@
 @import "body";
 @import "footer";
 @import "wrapper";
+@import "filter";
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px solid;
+  cursor: pointer;
+}
+.checkbox:after {
+  position: absolute;
+  width: 100%;
+  line-height: 100%;
+  text-align: center;
+}
+.checkbox[data-checked="true"]:after {
+  box-sizing: border-box;
+  content: "";
+  background-color:var(--primal);
+  border:2px solid white;
+  width: 100%;
+  height: 100%;
+}
 
 .filter{
   display:none;
