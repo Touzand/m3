@@ -1,0 +1,152 @@
+.filter-option-container {
+  overflow: hidden;
+  transition: height ease;
+  height: 36px;
+
+  .filter-option-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+    color: var(--dark-75);
+    font-weight: unset;
+
+    * {
+      pointer-events: none;
+    }
+  }
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input[type="submit"] {
+  padding: 0.5rem;
+  background-color: var(--primal);
+  color: white;
+  border: none;
+  border: solid thin var(--primal);
+  width: 50%;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  padding: 0.5rem;
+  background-color: white;
+  border: solid thin var(--dark-75);
+  color: var(--dark-75);
+  width: 50%;
+  cursor: pointer;
+}
+
+.form-buttons {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.radio-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  gap: 0.25rem;
+}
+
+.radio {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: 32px;
+  position: relative;
+  width: 32px;
+}
+
+.radio label {
+  background: #fff no-repeat center center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.radio label span {
+  z-index: 1;
+}
+.radio label input[type="radio"] {
+  all: unset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.radio label input[type="radio"]:checked {
+  background-color: white;
+  border: solid thin var(--primal);
+  box-sizing: border-box;
+}
+.radio label input[type="radio"]:checked + span {
+  color: var(--dark);
+}
+
+input[type="radio"]:not(old) {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input[type="radio"]:not(old) + label::-moz-selection,
+input[type="radio"]:not(old) + label::selection {
+  color: inherit;
+  background-color: transparent;
+}
+
+input[type="radio"]:not(old) + label {
+  cursor: pointer;
+}
+
+input[type="radio"]:not(old) + label:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px double black;
+  cursor: pointer;
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+input[type="radio"]:not(old):checked + label:before {
+  box-shadow: inset 0 0 1px 2px white;
+  background: var(--primal);
+}
+
+.open-buttons {
+  opacity: 1;
+}
+
+.option-margin {
+  margin: 1rem 0;
+}
+
+.filter-open {
+  height: 100%;
+}
+
+.color-option{
+  margin:1rem 0;
+}

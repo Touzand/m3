@@ -28,86 +28,170 @@
           <h2 class="wrap-close">x</h2>
         </div>
         <div class="wrap-filter-body">
-          <div class="filter-option-container cores">
-            <div class="filter-option-header">
-              <h3>CORES</h3>
-              <h3>V</h3>
-            </div>
-            <div class="filter-option-content">
-              <form id="form-color" accept-charset="utf-8">
-                <div class="color-option">
-                  <input type="checkbox" name="Amarelo" id="Amarelo" />
-                  <h3>Amarelo</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Azul" id="Azul" />
-                  <h3>Azul</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Branco" id="Branco" />
-                  <h3>Branco</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Cinza" id="Cinza" />
-                  <h3>Cinza</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Laranja" id="Laranja" />
-                  <h3>Laranja</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Verde" id="Verde" />
-                  <h3>Verde</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Vermelho" id="Vermelho" />
-                  <h3>Vermelho</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Preto" id="Preto" />
-                  <h3>Preto</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Rosa" id="Rosa" />
-                  <h3>Rosa</h3>
-                </div>
-                <div class="color-option">
-                  <input type="checkbox" name="Vinho" id="Vinho" />
-                  <h3>Vinho</h3>
-                </div>
-              </form>
-            </div>
-          </div>
+          <form id="filter-form" accept-charset="utf-8">
+            <details>
+              <summary>CORES</summary>
 
-          <div class="filter-option-container tamanho">
-            <div class="filter-option-header">
-              <h3>TAMANHO</h3>
-              <h3>V</h3>
-            </div>
-            <div class="filter-option-content">
-              <form id="form-color" accept-charset="utf-8">
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-              </form>
-            </div>
-          </div>
+              <div class="filter-option-content option-margin">
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Amarelo" id="Amarelo" />
+                  <label for="Amarelo">Amarelo</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Azul" id="Azul" />
+                  <label for="Azul">Azul</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Branco" id="Branco" />
+                  <label for="Branco">Branco</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Cinza" id="Cinza" />
+                  <label for="Cinza">Cinza</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Laranja" id="Laranja" />
+                  <label for="Laranja">Laranja</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Verde" id="Verde" />
+                  <label for="Verde">Verde</label>
+                </div>
+                <div class="color-option">
+                  <input
+                    type="radio"
+                    name="cor"
+                    value="Vermelho"
+                    id="Vermelho"
+                  />
+                  <label for="Vermelho">Vermelho</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Preto" id="Preto" />
+                  <label for="Preto">Preto</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Rosa" id="Rosa" />
+                  <label for="Rosa">Rosa</label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="cor" value="Vinho" id="Vinho" />
+                  <label for="Vinho">Vinho</label>
+                </div>
+              </div>
+            </details>
 
-          <div class="filter-option-container preco">
-            <div class="filter-option-header">
-              <h3>FAIXA DE PREÇO</h3>
-              <h3>V</h3>
+            <details>
+              <summary>TAMANHO</summary>
+              <div class="filter-option-content">
+                <div id="input-option356" class="radio-container option-margin">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="P" />
+                      <span>P</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="M" />
+                      <span>M</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="G" />
+                      <span>G</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="GG" />
+                      <span>GG</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="U" />
+                      <span>U</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="36" />
+                      <span>36</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="38" />
+                      <span>38</span>
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" value="40" />
+                      <span>40</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details>
+              <summary>FAIXA DE PREÇO</summary>
+              <div class="filter-option-content option-margin">
+                <div class="option">
+                  <input
+                    type="radio"
+                    name="price-range"
+                    value="0 50"
+                    id="050"
+                  />
+                  <label for="050">de R$0 até R$50</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    name="price-range"
+                    value="51 150"
+                    id="51150"
+                  />
+                  <label for="51150">de R$51 até R$150</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    name="price-range"
+                    value="151 300"
+                    id="151300"
+                  />
+                  <label for="151300">de R$151 até R$300</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    name="price-range"
+                    value="301 500"
+                    id="301500"
+                  />
+                  <label for="301500">de R$301 até R$500</label>
+                </div>
+                <div class="option">
+                  <input
+                    type="radio"
+                    name="price-range"
+                    value="500 5000"
+                    id="50000"
+                  />
+                  <label for="50000">a partir de R$500</label>
+                </div>
+              </div>
+            </details>
+            <div class="form-buttons">
+            <input type="submit" name="submit" id="submit" value="APLICAR" />
+            <input type="reset" name="reset" id="reset" value="LIMPAR"/>
             </div>
-            <div class="filter-option-content">
-              <form id="form-color" accept-charset="utf-8">
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-                <input type="radio" name="" id="" />
-              </form>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
 

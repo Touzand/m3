@@ -1,3 +1,5 @@
+@import "filter";
+
 .wrapper {
   width: 100%;
   position: fixed;
@@ -7,7 +9,12 @@
   background-color: white;
   color: var(--dark-75);
   transform: translateX(100%);
-  transition:transform .5s ease ;
+  transition: transform 0.5s ease;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   .wrap-header {
     text-transform: uppercase;
@@ -42,29 +49,3 @@
 .wrap-open {
   transform: translateX(0%);
 }
-
-.filter-option-container{
-  overflow: hidden;
-  transition:height ease;
-  height: 36px;
-
-  .filter-option-header{
-  display:flex;
-  justify-content: space-between;
-  font-size:1.25rem;
-  padding:.5rem 0;
-  color:var(--dark-75);
-  font-weight: unset;
-
-  *{
-  pointer-events:none;
-  }
-  }
-
-  .filter-option-content{
-  }
-}
-
-  .filter-open{
-  height:100%;
-  }

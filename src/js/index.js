@@ -30,6 +30,7 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".wrap-close")) {
     document.querySelector(".filtrar").classList.remove("wrap-open");
     document.querySelector(".ordenar").classList.remove("wrap-open");
+document.querySelector('.form-buttons').classList.remove('open-buttons')
   }
 
   if (e.target.matches(".low-price")) {
@@ -50,10 +51,21 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".filter-option-header")) {
     e.target.parentNode.classList.toggle("filter-open");
   }
+
+if (e.target.matches("summary")) {
+document.querySelector('.form-buttons').classList.add('open-buttons')
+  }
 });
 
-document.getElementById('form-color').addEventListener('change', e=>{
-console.log(e.target.name)
-colorFilter(e.target.name)
-})
+document.getElementById("filter-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  document.querySelector(".filtrar").classList.remove("wrap-open");
 
+  let pr = d.querySelectorAll(".product");
+
+  for (let i = 0; i < pr.length; i++) {
+    pr[i].classList.remove("filter");
+  }
+
+  colorFilter();
+});

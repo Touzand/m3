@@ -60,34 +60,100 @@ export const dataFilter = () => {
   }
 };
 
-export const colorFilter = (color) => {
-  let pr = d.querySelectorAll(".product");
-  let arr = [];
+export const colorFilter = () => {
+console.log( Array.from(document.querySelectorAll('.filter')).filter(item => !item.classList.includes('filter')) )
 
-  for (let i = 0; i < pr.length; i++) {
-    arr.push(pr[i]);
+  let pr = d.querySelectorAll(".product:not( .filter )"),
+    myForm = document.getElementById("filter-form"),
+    formData = new FormData(myForm),
+    selectedColor = [],
+    selectedSize = [],
+    selectedPriceRange = [];
+
+  for (const [key, value] of formData) {
+    if (key === "cor") {
+      selectedColor.push(value);
+    } else if (key === "size") {
+      selectedSize.push(value);
+    } else if (key === "price-range") {
+      selectedPriceRange = value.split(" ");
+    }
   }
 
-  console.log(arr);
-  let newArr = arr.filter((prod) => prod.getAttribute("data-color") === color);
+    for (let u = 0; u < pr.length; u++) {
+      pr[u].getAttribute("data-color") === selectedColor[0]
+        ? pr[u].classList.remove("filter")
+        : pr[u].classList.add("filter");
+    }
 
-  $productContainer.innerHTML = "";
-  for (let i = 0; i < newArr.length; i++) {
-    $productContainer.appendChild(newArr[i]);
+pr = d.querySelectorAll(".product:not(.filter )");
+console.log(pr);
+
+  for (let i = 0; i < selectedSize.length; i++) {
+    for (let u = 0; u < pr.length; u++) {
+      pr[u].getAttribute("data-size").includes(selectedSize[i])
+        ? pr[u].classList.remove("filter")
+        : pr[u].classList.add("filter");
+    }
+  }
+
+pr = d.querySelectorAll(".product:not( .filter )");
+console.log(pr);
+
+  for (let i = 0; i < selectedPriceRange.length; i++) {
+    for (let u = 0; u < pr.length; u++) {
+      parseInt(pr[u].getAttribute("data-price")) >
+        parseInt(selectedPriceRange[0]) &&
+      parseInt(pr[u].getAttribute("data-price")) <
+        parseInt(selectedPriceRange[1])
+        ? pr[u].classList.remove("filter")
+        : pr[u].classList.add("filter");
+    }
   }
 };
 
-//let pr = d.querySelectorAll(".product");
-//let arr = [];
+//export const sizeFilter = () => {
+  //let pr = d.querySelectorAll(".product:not( [filter] )");
 
-//for (let i = 0; i < pr.length; i++) {
-//arr.push(pr[i]);
-//}
+  //let selectedSize = [];
+  //var myForm = document.getElementById("filter-form"),
+    //formData = new FormData(myForm);
 
-//arr.sort((a) => {
-//return a.getAttribute("data-color") === color;
-//});
+  //for (const [key, value] of formData) {
+  //}
 
-//for (let i = 0; i < arr.length; i++) {
-//$productContainer.appendChild(arr[i]);
+  //console.log(selectedSize);
+
+  //for (let i = 0; i < selectedSize.length; i++) {
+    //for (let u = 0; u < pr.length; u++) {
+      //pr[u].getAttribute("data-size").includes(selectedSize[i])
+        //? pr[u].classList.remove("filter")
+        //: pr[u].classList.add("filter");
+    //}
+  //}
+//};
+
+//export const priceRangeFilter = () => {
+  //let pr = d.querySelectorAll(".product");
+
+  //for (let i = 0; i < pr.length; i++) {
+    //pr[i].classList.remove("filter");
+  //}
+
+  //let selectedPriceRange = [];
+  //var myForm = document.getElementById("filter-form"),
+    //formData = new FormData(myForm);
+
+  //for (const [key, value] of formData) {
+  //}
+  //for (let i = 0; i < selectedPriceRange.length; i++) {
+    //for (let u = 0; u < pr.length; u++) {
+      //parseInt(pr[u].getAttribute("data-price")) >
+        //parseInt(selectedPriceRange[0]) &&
+      //parseInt(pr[u].getAttribute("data-price")) <
+        //parseInt(selectedPriceRange[1])
+        //? pr[u].classList.remove("filter")
+        //: pr[u].classList.add("filter");
+    //}
+  //}
 //};

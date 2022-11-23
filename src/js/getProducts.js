@@ -20,7 +20,7 @@ const DisplayProducts = (products) => {
 
 products.forEach((product,id) => {
 
-if(id < 10){
+if(id < 4){
     $template
       .querySelector(".product")
       .setAttribute("data-size", `${product.size.join(" ")}`);
