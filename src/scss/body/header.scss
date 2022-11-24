@@ -1,7 +1,25 @@
 header {
+  border-bottom: medium solid var(--dark-50);
   display: flex;
   justify-content: space-between;
-  border-bottom: medium solid var(--dark-50);
+}
+
+.header-content{
+    width:100%;
   align-items: center;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 900px){
+header {
+  border-bottom: medium solid var(--dark-50);
+  display: flex;
+  justify-content: center;
+}
+
+  .header-content{
+    width: 900px;
+  }
 }

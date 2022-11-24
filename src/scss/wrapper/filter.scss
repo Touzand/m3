@@ -136,7 +136,7 @@ input[type="radio"]:not(old):checked + label:before {
 }
 
 .open-buttons {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .option-margin {
@@ -147,6 +147,39 @@ input[type="radio"]:not(old):checked + label:before {
   height: 100%;
 }
 
-.color-option{
-  margin:1rem 0;
+.color-option {
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 900px) {
+  .form-buttons {
+    opacity: 1;
+  }
+
+  .filter-sub {
+    margin: 1rem 0;
+  }
+
+  #filter-form {
+    position: sticky;
+    top: 1rem;
+    width: 200px;
+  }
+
+  .radio-container{
+  }
+
+  .styled select {
+    background: transparent;
+    width: 150px;
+    font-size: 16px;
+    border: none;
+    height: 34px;
+    padding: 0 0.5rem;
+  }
+  .styled {
+    height: 34px;
+    border: 1px solid #111;
+    overflow: hidden;
+  }
 }

@@ -2,6 +2,7 @@
 @import "./reset/index";
 @import "./body/index";
 @import "./wrapper/index";
+
 .filter{
   //display:none;
   visibility: hidden;
@@ -9,10 +10,27 @@
   order: 1;
 }
 
-@media(min-width:770px){
+.mobile{
+  display:auto !important;
+}
+
+.desktop{
+  display:none !important;
+}
+
+@media screen and (min-width: 900px){
   .filter{
   visibility: hidden;
   opacity: 0;
   order: 1;
   }
+
+  .mobile{
+    display:none !important;
+  }
+
+  .desktop{
+    display:block !important;
+  }
 }
+

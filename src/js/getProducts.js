@@ -5,22 +5,23 @@ const $template = d.getElementById("tmp").content,
   $productContainer = d.querySelector(".products-container"),
 $fragment = d.createDocumentFragment();
 
-export const getProducts = async () => {
+export const getProducts = async (max) => {
+$productContainer.innerHTML = ''
+
   try {
     const res = await fetch("http://localhost:5000/products");
     const data = await res.json();
-    DisplayProducts(data);
+    DisplayProducts(data,max);
   } catch (err) {
     console.log(err);
   }
 };
 
-const DisplayProducts = (products) => {
-  console.log(products);
+const DisplayProducts = (products,max) => {
 
 products.forEach((product,id) => {
 
-if(id < 4){
+if(id < max){
     $template
       .querySelector(".product")
       .setAttribute("data-size", `${product.size.join(" ")}`);

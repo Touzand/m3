@@ -8,10 +8,22 @@ body {
   padding: 0;
   margin: 0;
 }
+
 section {
   padding-top: 4rem;
   width: 50%;
   margin: auto;
+}
+
+.carregar-mais {
+  margin: 1rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primal);
+  font-size: 1.025rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
 }
 
 .body {
@@ -19,28 +31,6 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-
-  & > h2 {
-    color: #333333;
-    padding: 1rem;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-
-  .filter-options {
-    display: flex;
-    flex-grow: 1;
-    width: 100%;
-
-    .filter-option {
-      background-color: transparent;
-      border: thin solid var(--dark-50);
-      color: var(--dark-50);
-      padding: 0.5rem;
-      font-size: 24px;
-      width: 50%;
-    }
-  }
 
   .grid-products {
     margin: 2rem 0;
@@ -85,16 +75,35 @@ section {
       }
     }
   }
+}
 
-  .carregar-mais {
-    margin: 1rem;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    background-color: var(--primal);
-    font-size: 1.025rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+
+  & > h2 {
+    color: #333333;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .filter-options {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+
+    .filter-option {
+      background-color: transparent;
+      border: thin solid var(--dark-50);
+      color: var(--dark-50);
+      padding: 0.5rem;
+      font-size: 24px;
+      width: 50%;
+    }
   }
 }
 
@@ -148,4 +157,43 @@ details p {
   font-size: 0.95rem;
   margin: 0 0 1rem;
   padding-top: 1rem;
+}
+
+  .slide-button{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media screen and (min-width: 900px) {
+
+  .slide-button{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .body {
+    display: flex !important;
+    flex-direction: row;
+    align-items: start;
+    width: 900px;
+    margin: auto;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 900px !important;
+    margin: auto;
+
+    &>h2{
+      padding:1rem 0;
+    }
+  }
+
 }

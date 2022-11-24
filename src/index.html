@@ -11,15 +11,177 @@
 
   <body>
     <header>
-      <img src="./img//logo-m3.png" alt="Logo" />
-      <div>icon</div>
+      <div class="header-content">
+        <img src="./img//logo-m3.png" alt="Logo" />
+        <div>icon</div>
+      </div>
     </header>
 
+    <div>
+      <div class="top">
+        <h2>Blusas</h2>
+        <div class="desktop styled">
+          <select id="slt">
+            <option selected>Ordenar por :</option>
+            <option value='recente'>Mais recente</option>
+            <option value='big-price'>Maior preço</option>
+            <option value='low-price'>Menor preço</option>
+          </select>
+        </div>
+        <div class="filter-options mobile">
+          <button class="filter-option order-btn">Ordenar</button>
+          <button class="filter-option filter-btn">Filtrar</button>
+        </div>
+      </div>
+    </div>
+
     <main class="body">
-      <h2>Blusas</h2>
-      <div class="filter-options">
-        <button class="filter-option order-btn">Ordenar</button>
-        <button class="filter-option filter-btn">Filtrar</button>
+      <div class="filter-desktop desktop">
+        <form id="filter-form" accept-charset="utf-8">
+          <div class="filter-option-content option-margin">
+            <h3 class="filter-sub desktop">CORES</h3>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Amarelo" id="Amarelo" />
+              <label for="Amarelo">Amarelo</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Azul" id="Azul" />
+              <label for="Azul">Azul</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Branco" id="Branco" />
+              <label for="Branco">Branco</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Cinza" id="Cinza" />
+              <label for="Cinza">Cinza</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Laranja" id="Laranja" />
+              <label for="Laranja">Laranja</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Verde" id="Verde" />
+              <label for="Verde">Verde</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Vermelho" id="Vermelho" />
+              <label for="Vermelho">Vermelho</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Preto" id="Preto" />
+              <label for="Preto">Preto</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Rosa" id="Rosa" />
+              <label for="Rosa">Rosa</label>
+            </div>
+            <div class="color-option">
+              <input type="radio" name="cor" value="Vinho" id="Vinho" />
+              <label for="Vinho">Vinho</label>
+            </div>
+          </div>
+          <div class="filter-option-content">
+            <div id="input-option356" class="radio-container option-margin">
+              <h3 class="filter-sub desktop">TAMANHO</h3>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="P" />
+                  <span>P</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="M" />
+                  <span>M</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="G" />
+                  <span>G</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="GG" />
+                  <span>GG</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="U" />
+                  <span>U</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="36" />
+                  <span>36</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="38" />
+                  <span>38</span>
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="40" />
+                  <span>40</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="filter-option-content option-margin">
+            <h3 class="filter-sub desktop">FAIXA DE PREÇO</h3>
+            <div class="option">
+              <input type="radio" name="price-range" value="0 50" id="050" />
+              <label for="050">de R$0 até R$50</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                name="price-range"
+                value="51 150"
+                id="51150"
+              />
+              <label for="51150">de R$51 até R$150</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                name="price-range"
+                value="151 300"
+                id="151300"
+              />
+              <label for="151300">de R$151 até R$300</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                name="price-range"
+                value="301 500"
+                id="301500"
+              />
+              <label for="301500">de R$301 até R$500</label>
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                name="price-range"
+                value="500 5000"
+                id="50000"
+              />
+              <label for="50000">a partir de R$500</label>
+            </div>
+          </div>
+          <div class="form-buttons">
+            <input type="submit" name="submit" id="submit" value="APLICAR" />
+            <input type="reset" name="reset" id="reset" value="LIMPAR" />
+          </div>
+        </form>
       </div>
 
       <div class="filtrar wrapper">
@@ -188,14 +350,14 @@
               </div>
             </details>
             <div class="form-buttons">
-            <input type="submit" name="submit" id="submit" value="APLICAR" />
-            <input type="reset" name="reset" id="reset" value="LIMPAR"/>
+              <input type="submit" name="submit" id="submit" value="APLICAR" />
+              <input type="reset" name="reset" id="reset" value="LIMPAR" />
             </div>
           </form>
         </div>
       </div>
 
-      <div class="ordenar wrapper">
+      <div class="ordenar wrapper mobile">
         <div class="wrap-header">
           <h2>Ordenar</h2>
           <h2 class="wrap-close">x</h2>
@@ -221,18 +383,11 @@
         </div>
       </template>
 
-      <!--<details>-->
-      <!--<summary>-->
-      <!--hola mundo-->
-      <!--</summary>-->
-      <!--<div>-->
-      <!--loco-->
-      <!--</div>-->
-      <!--</details>-->
+      <div class="slide-button">
+        <article class="products-container grid-products"></article>
 
-      <article class="products-container grid-products"></article>
-
-      <button class="carregar-mais">Carregar mais</button>
+        <button class="carregar-mais">Carregar mais</button>
+      </div>
     </main>
 
     <footer>M3: IMPLANTAÇÃO DE E-COMMERCE VTEX</footer>
