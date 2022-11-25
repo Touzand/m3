@@ -65,6 +65,32 @@ document.addEventListener("click", (e) => {
   if (e.target.matches("#reset")) {
     getProducts(6);
   }
+
+  if (e.target.matches(".custom-option")) {
+    if (e.target.getAttribute("data-value") === "big-price") {
+      bigPriceFilter();
+    }
+
+    if (e.target.getAttribute("data-value") === "low-price") {
+      lowPriceFilter();
+    }
+
+  }
+
+if (e.target.matches(".show-colors")) {
+
+e.target.parentNode.removeChild(e.target)
+
+      document
+        .querySelector(".filter-cores")
+        .classList.add("filter-cores-open");
+    }
+
+if (e.target.matches(".product-button")) {
+const num = parseInt(document.querySelector('carrinho span').textContent)
+console.log(num)
+
+    }
 });
 
 document.getElementById("filter-form").addEventListener("submit", (e) => {
@@ -80,12 +106,39 @@ document.getElementById("filter-form").addEventListener("submit", (e) => {
   colorFilter();
 });
 
-document.getElementById("slt").addEventListener("change", (e) => {
-  if (e.target.value === "big-price") {
-    bigPriceFilter();
-  }
+//document.getElementById("slt").addEventListener("change", (e) => {
+//if (e.target.value === "big-price") {
+//bigPriceFilter();
+//}
 
-  if (e.target.value === "low-price") {
-    lowPriceFilter();
+//if (e.target.value === "low-price") {
+//lowPriceFilter();
+//}
+//});
+
+document
+  .querySelector(".select-wrapper")
+  .addEventListener("click", function () {
+    this.querySelector(".select").classList.toggle("open");
+  });
+
+for (const option of document.querySelectorAll(".custom-option")) {
+  option.addEventListener("click", function () {
+    if (!this.classList.contains("selected")) {
+      this.parentNode
+        .querySelector(".custom-option.selected")
+        .classList.remove("selected");
+      this.classList.add("selected");
+      this.closest(".select").querySelector(
+        ".select__trigger span"
+      ).textContent = this.textContent;
+    }
+  });
+}
+
+window.addEventListener("click", function (e) {
+  const select = document.querySelector(".select");
+  if (!select.contains(e.target)) {
+    select.classList.remove("open");
   }
 });

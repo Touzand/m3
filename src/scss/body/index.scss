@@ -1,5 +1,7 @@
 @import "header";
 @import "footer";
+@import "select";
+@import "carrinho";
 
 body {
   font: menu;
@@ -72,6 +74,7 @@ section {
         font-size: 1.025rem;
         font-weight: bold;
         color: white;
+        cursor: pointer;
       }
     }
   }
@@ -179,8 +182,13 @@ details p {
     display: flex !important;
     flex-direction: row;
     align-items: start;
-    width: 900px;
+    gap:3rem;
+    width: 1000px;
     margin: auto;
+
+    .grid-products{
+      gap:2rem !important;
+    }
   }
 
   .top {
@@ -188,7 +196,7 @@ details p {
     flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
-    width: 900px !important;
+    width: 1000px !important;
     margin: auto;
 
     &>h2{

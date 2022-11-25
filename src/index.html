@@ -13,21 +13,37 @@
     <header>
       <div class="header-content">
         <img src="./img//logo-m3.png" alt="Logo" />
-        <div>icon</div>
+        <div class="carrinho sidebar-social">
+          <img src="http://imgfz.com/i/56rlHmd.png" alt="carrinho" class="cart"/>
+          <span id="cart_menu_num" data-action="cart-can" class="badge rounded-circle">0</span>
+        </div>
       </div>
     </header>
 
     <div>
       <div class="top">
         <h2>Blusas</h2>
-        <div class="desktop styled">
-          <select id="slt">
-            <option selected>Ordenar por :</option>
-            <option value='recente'>Mais recente</option>
-            <option value='big-price'>Maior preço</option>
-            <option value='low-price'>Menor preço</option>
-          </select>
+
+        <div class="select-wrapper desktop">
+          <div class="select">
+            <div class="select__trigger">
+              <span>Ordenar por :</span>
+              <div class="arrow"></div>
+            </div>
+            <div class="custom-options">
+              <span class="custom-option selected" data-value="recente"
+                >Mais recente</span
+              >
+              <span class="custom-option" data-value="big-price"
+                >Maior preço</span
+              >
+              <span class="custom-option" data-value="low-price"
+                >Menor preço</span
+              >
+            </div>
+          </div>
         </div>
+
         <div class="filter-options mobile">
           <button class="filter-option order-btn">Ordenar</button>
           <button class="filter-option filter-btn">Filtrar</button>
@@ -38,7 +54,7 @@
     <main class="body">
       <div class="filter-desktop desktop">
         <form id="filter-form" accept-charset="utf-8">
-          <div class="filter-option-content option-margin">
+          <div class="filter-option-content option-margin filter-cores">
             <h3 class="filter-sub desktop">CORES</h3>
             <div class="color-option">
               <input type="radio" name="cor" value="Amarelo" id="Amarelo" />
@@ -81,6 +97,7 @@
               <label for="Vinho">Vinho</label>
             </div>
           </div>
+          <h3 class="show-colors">Ver todas as cores V</h3>
           <div class="filter-option-content">
             <div id="input-option356" class="radio-container option-margin">
               <h3 class="filter-sub desktop">TAMANHO</h3>
@@ -379,7 +396,7 @@
             <h3></h3>
             <span></span>
           </div>
-          <button>COMPRAR</button>
+          <button class="product-button">COMPRAR</button>
         </div>
       </template>
 

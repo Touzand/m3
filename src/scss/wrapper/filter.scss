@@ -58,7 +58,7 @@ input[type="reset"] {
 .radio-container {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 55%;
   gap: 0.25rem;
 }
 
@@ -160,26 +160,29 @@ input[type="radio"]:not(old):checked + label:before {
     margin: 1rem 0;
   }
 
+  .color-option{
+    margin:0;
+    margin-top:1rem;
+  }
+
   #filter-form {
     position: sticky;
     top: 1rem;
     width: 200px;
   }
 
-  .radio-container{
+  .filter-cores{
+    height: 230px;
+    overflow: hidden;
   }
 
-  .styled select {
-    background: transparent;
-    width: 150px;
-    font-size: 16px;
-    border: none;
-    height: 34px;
-    padding: 0 0.5rem;
+  .show-colors{
+color:var(--dark-75);
+text-decoration: underline;
+cursor: pointer;
   }
-  .styled {
-    height: 34px;
-    border: 1px solid #111;
-    overflow: hidden;
+
+  .filter-cores-open{
+    height: 100%;
   }
 }
