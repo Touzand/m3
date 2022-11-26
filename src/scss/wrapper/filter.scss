@@ -28,7 +28,7 @@
   gap: 0.5rem;
 }
 
-input[type="submit"] {
+.submit-button {
   padding: 0.5rem;
   background-color: var(--primal);
   color: white;
@@ -85,7 +85,7 @@ input[type="reset"] {
 .radio label span {
   z-index: 1;
 }
-.radio label input[type="radio"] {
+.radio label input[type="checkbox"] {
   all: unset;
   position: absolute;
   width: 100%;
@@ -93,33 +93,33 @@ input[type="reset"] {
   top: 0;
   left: 0;
 }
-.radio label input[type="radio"]:checked {
+.radio label input[type="checkbox"]:checked {
   background-color: white;
   border: solid thin var(--primal);
   box-sizing: border-box;
 }
-.radio label input[type="radio"]:checked + span {
+.radio label input[type="checkbox"]:checked + span {
   color: var(--dark);
 }
 
-input[type="radio"]:not(old) {
+input[type="checkbox"]:not(old) {
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-input[type="radio"]:not(old) + label::-moz-selection,
-input[type="radio"]:not(old) + label::selection {
+input[type="checkbox"]:not(old) + label::-moz-selection,
+input[type="checkbox"]:not(old) + label::selection {
   color: inherit;
   background-color: transparent;
 }
 
-input[type="radio"]:not(old) + label {
+input[type="checkbox"]:not(old) + label {
   cursor: pointer;
 }
 
-input[type="radio"]:not(old) + label:before {
+input[type="checkbox"]:not(old) + label:before {
   content: "";
   width: 15px;
   height: 15px;
@@ -130,7 +130,7 @@ input[type="radio"]:not(old) + label:before {
   margin-right: 5px;
 }
 
-input[type="radio"]:not(old):checked + label:before {
+input[type="checkbox"]:not(old):checked + label:before {
   box-shadow: inset 0 0 1px 2px white;
   background: var(--primal);
 }
@@ -151,18 +151,18 @@ input[type="radio"]:not(old):checked + label:before {
   margin: 1rem 0;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1040px) {
   .form-buttons {
-    opacity: 1;
+    display: none;
   }
 
   .filter-sub {
     margin: 1rem 0;
   }
 
-  .color-option{
-    margin:0;
-    margin-top:1rem;
+  .color-option {
+    margin: 0;
+    margin-top: 1rem;
   }
 
   #filter-form {
@@ -171,18 +171,31 @@ input[type="radio"]:not(old):checked + label:before {
     width: 200px;
   }
 
-  .filter-cores{
+  .filter-cores {
     height: 230px;
     overflow: hidden;
   }
 
-  .show-colors{
-color:var(--dark-75);
-text-decoration: underline;
-cursor: pointer;
+  .show-colors {
+    font-size: 0.9rem;
+    color: var(--dark-75);
+    cursor: pointer;
+    display: flex;
   }
 
-  .filter-cores-open{
+  .show-colors * {
+    pointer-events: none;
+  }
+
+  .show-colors h3 {
+    text-decoration: underline;
+  }
+
+  .show-colors span {
+    margin: 0 0.25rem;
+  }
+
+  .filter-cores-open {
     height: 100%;
   }
 }

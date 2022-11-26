@@ -58,7 +58,8 @@ document.addEventListener("click", (e) => {
     document.querySelectorAll(".form-buttons")[1].classList.add("open-buttons");
   }
 
-  if (e.target.matches(".carregar-mais")) {
+if (e.target.matches(".carregar-mais")) {
+e.target.style.display = 'none'
     getProducts(14);
   }
 
@@ -74,29 +75,35 @@ document.addEventListener("click", (e) => {
     if (e.target.getAttribute("data-value") === "low-price") {
       lowPriceFilter();
     }
-
   }
 
-if (e.target.matches(".show-colors")) {
+  if (e.target.matches(".show-colors")) {
+    e.target.parentNode.removeChild(e.target);
 
-e.target.parentNode.removeChild(e.target)
+    document.querySelector(".filter-cores").classList.add("filter-cores-open");
+  }
 
-      document
-        .querySelector(".filter-cores")
-        .classList.add("filter-cores-open");
-    }
+  if (e.target.matches(".product-button")) {
+    const num = parseInt(document.querySelector("carrinho span").textContent);
+    console.log(num);
+  }
 
-if (e.target.matches(".product-button")) {
-const num = parseInt(document.querySelector('carrinho span').textContent)
-console.log(num)
+  if (
+    e.target.matches(".color-option input") &&
+    e.target.parentNode.querySelector("input:checked")) {
+    //console.log(e.target.parentNode.querySelector('input').checked = false)
 
-    }
+    console.log("checado");
+}
+
+if(e.target.matches('.submit-button')){
+e.preventDefault()
+    document.querySelector(".filtrar").classList.remove("wrap-open");
+}
 });
 
-document.getElementById("filter-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  document.querySelector(".filtrar").classList.remove("wrap-open");
-
+document.getElementById("filter-form").addEventListener("change", (e) => {
+console.log(e.target)
   let pr = d.querySelectorAll(".product");
 
   for (let i = 0; i < pr.length; i++) {
@@ -105,16 +112,6 @@ document.getElementById("filter-form").addEventListener("submit", (e) => {
 
   colorFilter();
 });
-
-//document.getElementById("slt").addEventListener("change", (e) => {
-//if (e.target.value === "big-price") {
-//bigPriceFilter();
-//}
-
-//if (e.target.value === "low-price") {
-//lowPriceFilter();
-//}
-//});
 
 document
   .querySelector(".select-wrapper")
@@ -142,3 +139,26 @@ window.addEventListener("click", function (e) {
     select.classList.remove("open");
   }
 });
+
+
+
+
+
+
+//window.addEventListener("DOMContentLoaded", function() {
+  //var radios = document.querySelectorAll("input[type=radio]");
+  //for(var i=0; i<radios.length; ++i) {
+    //radios[i].addEventListener("click", function(e) {
+      //if(e.target.checked && e.target.value == window.lastrv){
+        //e.target.checked = false;
+        //window.lastrv = 0;
+      //}
+      //else
+        //window.lastrv = e.target.value;
+    //});
+
+    //radios[i].addEventListener("keypress", function(e) {
+      //if(e.keyCode==32) e.target.click();
+    //});
+  //}
+//});

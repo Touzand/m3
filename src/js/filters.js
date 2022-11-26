@@ -47,7 +47,6 @@ export const dataFilter = () => {
     arr.push(pr[i]);
   }
 
-
   arr.sort((a, b) => {
     return a.getAttribute("data-date") < b.getAttribute("data-date");
   });
@@ -58,7 +57,6 @@ export const dataFilter = () => {
 };
 
 export const colorFilter = () => {
-
   let pr = d.querySelectorAll(".product:not( .filter )"),
     myForm = document.getElementById("filter-form"),
     formData = new FormData(myForm),
@@ -76,23 +74,39 @@ export const colorFilter = () => {
     }
   }
 
-    for (let u = 0; u < pr.length; u++) {
-      pr[u].getAttribute("data-color") === selectedColor[0]
-        ? pr[u].classList.remove("filter")
-        : pr[u].classList.add("filter");
-    }
+  console.log(selectedColor, selectedSize);
 
-pr = d.querySelectorAll(".product:not(.filter )");
-
-  for (let i = 0; i < selectedSize.length; i++) {
+  for (let i = 0; i < selectedColor.length; i++) {
     for (let u = 0; u < pr.length; u++) {
-      pr[u].getAttribute("data-size").includes(selectedSize[i])
+      pr[u].getAttribute("data-color") === selectedColor[0] ||
+      pr[u].getAttribute("data-color") === selectedColor[1] ||
+      pr[u].getAttribute("data-color") === selectedColor[2] ||
+      pr[u].getAttribute("data-color") === selectedColor[3] ||
+      pr[u].getAttribute("data-color") === selectedColor[4] ||
+      pr[u].getAttribute("data-color") === selectedColor[5] ||
+      pr[u].getAttribute("data-color") === selectedColor[6]
         ? pr[u].classList.remove("filter")
         : pr[u].classList.add("filter");
     }
   }
 
-pr = d.querySelectorAll(".product:not( .filter )");
+  pr = d.querySelectorAll(".product:not(.filter )");
+
+  for (let i = 0; i < selectedSize.length; i++) {
+    for (let u = 0; u < pr.length; u++) {
+      pr[u].getAttribute("data-size") === selectedSize[0] ||
+      pr[u].getAttribute("data-size") === selectedSize[1] ||
+      pr[u].getAttribute("data-size") === selectedSize[2] ||
+      pr[u].getAttribute("data-size") === selectedSize[3] ||
+      pr[u].getAttribute("data-size") === selectedSize[4] ||
+      pr[u].getAttribute("data-size") === selectedSize[5] ||
+      pr[u].getAttribute("data-size") === selectedSize[6]
+        ? pr[u].classList.remove("filter")
+        : pr[u].classList.add("filter");
+    }
+  }
+
+  pr = d.querySelectorAll(".product:not( .filter )");
 
   for (let i = 0; i < selectedPriceRange.length; i++) {
     for (let u = 0; u < pr.length; u++) {

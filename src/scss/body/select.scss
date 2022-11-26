@@ -15,7 +15,7 @@
   flex-direction: column;
   border-width: 0px 2px 0px 2px;
   border-style: solid;
-  border-color: #394a6d;
+  border-color: black;
 }
 .select__trigger {
   position: relative;
@@ -32,7 +32,7 @@
   cursor: pointer;
   border-width: 2px 0 2px 0;
   border-style: solid;
-  border-color: #394a6d;
+  border-color: black;
 }
 .custom-options {
   position: absolute;
@@ -40,7 +40,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  border: 2px solid #394a6d;
+  border: 2px solid black;
   border-top: 0;
   background: #fff;
   transition: all 0.5s;
@@ -60,7 +60,7 @@
   padding: 0 1rem;
   /* font-size: 22px; */
   font-weight: 300;
-  color: #3b3b3b;
+  color: black;
   line-height: 30px;
   cursor: pointer;
   transition: all 0.5s;
