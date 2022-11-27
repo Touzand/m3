@@ -135,6 +135,7 @@ d.querySelector('.cart-background').classList.add('cart-background-true')
 });
 
 document.getElementById("filter-form-mobile").addEventListener("change", (e) => {
+console.log('mobile')
   console.log(e.target);
   let pr = d.querySelectorAll(".product");
 
@@ -146,7 +147,7 @@ document.getElementById("filter-form-mobile").addEventListener("change", (e) => 
 });
 
 document.getElementById("filter-form-mobile").addEventListener("change", (e) => {
-  console.log(e.target);
+console.log('desktop')
   let pr = d.querySelectorAll(".product");
 
   for (let i = 0; i < pr.length; i++) {
@@ -183,20 +184,18 @@ window.addEventListener("click", function (e) {
   }
 });
 
-//window.addEventListener("DOMContentLoaded", function() {
-//var radios = document.querySelectorAll("input[type=radio]");
-//for(var i=0; i<radios.length; ++i) {
-//radios[i].addEventListener("click", function(e) {
-//if(e.target.checked && e.target.value == window.lastrv){
-//e.target.checked = false;
-//window.lastrv = 0;
-//}
-//else
-//window.lastrv = e.target.value;
-//});
+var radios = document.querySelectorAll("input[type=radio]");
+  for(var i=0; i<radios.length; ++i) {
+    radios[i].addEventListener("click", function(e) {
+      if(e.target.checked && e.target.value == window.lastrv){
+        e.target.checked = false;
+        window.lastrv = 0;
+      }
+      else
+        window.lastrv = e.target.value;
+    });
 
-//radios[i].addEventListener("keypress", function(e) {
-//if(e.keyCode==32) e.target.click();
-//});
-//}
-//});
+    radios[i].addEventListener("keypress", function(e) {
+      if(e.keyCode==32) e.target.click();
+    });
+  }

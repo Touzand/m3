@@ -75,6 +75,7 @@ export const colorFilter = (form) => {
   }
 
   console.log(selectedColor, selectedSize);
+  pr = d.querySelectorAll(".product:not(.filter )");
 
   for (let i = 0; i < selectedColor.length; i++) {
     for (let u = 0; u < pr.length; u++) {
