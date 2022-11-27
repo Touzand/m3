@@ -1,3 +1,4 @@
+import { getProducts } from './getProducts'
 import { addToCart } from "./addToCart";
 import {
   bigPriceFilter,

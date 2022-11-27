@@ -202,7 +202,17 @@ input[type="radio"]:not(old):checked + label:before {
   margin: 1rem 0;
 }
 
-@media screen and (min-width: 1040px) {
+.color-option label {
+  display:flex;
+  align-items: center;
+}
+
+.option label {
+  display:flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1025px) {
   .form-buttons {
     display: none;
   }

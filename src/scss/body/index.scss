@@ -156,7 +156,7 @@ details summary:after {
   transition: 200ms linear;
 }
 details[open] summary:after {
-  transform: rotate(180deg);
+  transform: scaleY(-1);
   font-size: 2rem;
 }
 details summary {
@@ -175,7 +175,7 @@ details p {
   align-items: center;
 }
 
-@media screen and (min-width: 1040px) {
+@media screen and (min-width: 1025px) {
   .slide-button {
     display: flex;
     flex-direction: column;

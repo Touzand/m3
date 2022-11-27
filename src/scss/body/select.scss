@@ -11,7 +11,7 @@
 }
 
 .select {
-  position: relative;
+  //position: relative;
   display: flex;
   flex-direction: column;
   border-width: 0px 2px 0px 2px;
@@ -31,7 +31,7 @@
   line-height: 60px;
   background: #ffffff;
   cursor: pointer;
-  border-width: 2px 0 2px 0;
+  border-width: 1px 0 1px 0;
   border-style: solid;
   border-color: black;
 }
@@ -91,19 +91,19 @@
 }
 .arrow::before {
   left: -5px;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   background-color: grey;
 }
 .arrow::after {
   left: 5px;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   background-color: grey;
 }
 .open .arrow::before {
   left: -5px;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 .open .arrow::after {
   left: 5px;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
