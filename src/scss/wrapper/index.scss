@@ -24,6 +24,12 @@
     font-size: 1.5rem;
     font-weight: 400;
     padding: 1rem;
+
+    h2{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .wrap-filter-body {
@@ -48,4 +54,24 @@
 
 .wrap-open {
   transform: translateX(0%);
+}
+
+.wrap-close {
+  cursor:pointer;
+  padding:.25rem;
+  border:solid thin red;
+  color:red;
+  width: 50px;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-close:hover {
+  cursor:pointer;
+  padding:.25rem;
+  border:solid thin red;
+  background-color: red;
+  color:white;
 }

@@ -2,7 +2,6 @@
 @import "footer";
 @import "select";
 @import "carrinho";
-@import "cart";
 
 body {
   font: menu;
@@ -71,12 +70,16 @@ main {
         color: white;
         cursor: pointer;
         box-sizing: border-box;
-        border:solid thin  black;
+        border: solid thin black;
 
-        &:hover{
-        background-color: transparent;
-        border:solid thin  black;
-        color:black;
+        &:hover {
+          background-color: transparent;
+          border: solid thin black;
+          color: black;
+        }
+
+        &:active {
+          transform: scale(0.9);
         }
       }
     }

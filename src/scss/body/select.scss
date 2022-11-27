@@ -9,6 +9,7 @@
   user-select: none;
   width: 170px;
 }
+
 .select {
   position: relative;
   display: flex;
@@ -71,7 +72,7 @@
 }
 .custom-option.selected {
   color: #ffffff;
-  background-color: var(--primal);;
+  background-color: var(--primal);
 }
 
 .arrow {

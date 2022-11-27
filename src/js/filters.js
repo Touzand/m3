@@ -1,11 +1,9 @@
-import { getProducts } from "./getProducts";
-
 let d = document,
   $productContainer = d.querySelector(".products-container");
 
 export const lowPriceFilter = () => {
-  let pr = d.querySelectorAll(".product");
-  let arr = [];
+  let pr = d.querySelectorAll(".product"),
+    arr = [];
 
   for (let i = 0; i < pr.length; i++) {
     arr.push(pr[i]);
@@ -21,8 +19,8 @@ export const lowPriceFilter = () => {
 };
 
 export const bigPriceFilter = () => {
-  let pr = d.querySelectorAll(".product");
-  let arr = [];
+  let pr = d.querySelectorAll(".product"),
+  arr = [];
 
   for (let i = 0; i < pr.length; i++) {
     arr.push(pr[i]);
@@ -40,23 +38,23 @@ export const bigPriceFilter = () => {
 };
 
 export const dataFilter = () => {
-  let pr = d.querySelectorAll(".product");
-  let arr = [];
+  //let pr = d.querySelectorAll(".product"),
+  //arr = [];
 
-  for (let i = 0; i < pr.length; i++) {
-    arr.push(pr[i]);
-  }
+  //for (let i = 0; i < pr.length; i++) {
+    //arr.push(pr[i]);
+  //}
 
-  arr.sort((a, b) => {
-    return a.getAttribute("data-date") < b.getAttribute("data-date");
-  });
+  //arr.sort((a, b) => {
+    //return a.getAttribute("data-date") < b.getAttribute("data-date");
+  //});
 
-  for (let i = 0; i < arr.length; i++) {
-    $productContainer.appendChild(arr[i]);
-  }
+  //for (let i = 0; i < arr.length; i++) {
+    //$productContainer.appendChild(arr[i]);
+  //}
 };
 
-export const colorFilter = (form) => {
+export const masterFilter = (form) => {
   let pr = d.querySelectorAll(".product:not( .filter )"),
     myForm = document.getElementById(form),
     formData = new FormData(myForm),
@@ -74,7 +72,6 @@ export const colorFilter = (form) => {
     }
   }
 
-  console.log(selectedColor, selectedSize);
   pr = d.querySelectorAll(".product:not(.filter )");
 
   for (let i = 0; i < selectedColor.length; i++) {
@@ -95,13 +92,11 @@ export const colorFilter = (form) => {
 
   for (let i = 0; i < selectedSize.length; i++) {
     for (let u = 0; u < pr.length; u++) {
-      pr[u].getAttribute("data-size") === selectedSize[0] ||
-      pr[u].getAttribute("data-size") === selectedSize[1] ||
-      pr[u].getAttribute("data-size") === selectedSize[2] ||
-      pr[u].getAttribute("data-size") === selectedSize[3] ||
-      pr[u].getAttribute("data-size") === selectedSize[4] ||
-      pr[u].getAttribute("data-size") === selectedSize[5] ||
-      pr[u].getAttribute("data-size") === selectedSize[6]
+      pr[u].getAttribute("data-size").includes(selectedSize[0]) ||
+      pr[u].getAttribute("data-size").includes(selectedSize[1]) ||
+      pr[u].getAttribute("data-size").includes(selectedSize[2]) ||
+      pr[u].getAttribute("data-size").includes(selectedSize[3]) ||
+      pr[u].getAttribute("data-size").includes(selectedSize[4])
         ? pr[u].classList.remove("filter")
         : pr[u].classList.add("filter");
     }

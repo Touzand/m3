@@ -4,22 +4,22 @@ header {
   justify-content: space-between;
 }
 
-.header-content{
-    width:100%;
+.header-content {
+  width: 100%;
   align-items: center;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
 }
 
-@media screen and (min-width: 1040px){
-header {
-  border-bottom: medium solid var(--dark-50);
-  display: flex;
-  justify-content: center;
-}
+@media screen and (min-width: 1040px) {
+  header {
+    border-bottom: medium solid var(--dark-50);
+    display: flex;
+    justify-content: center;
+  }
 
-  .header-content{
+  .header-content {
     width: 1000px;
   }
 }
