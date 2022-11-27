@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desenvolvedor M3</title>
+    <meta
+      name="description"
+      content="Projeto/desafio 'Desenvolvedor M3' feito com HTML, CSS e VanillaJS"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Alan G. Alonso" />
+    <title>Digital Performance</title>
     <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet" />
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="shortcut icon"
+      href="http://imgfz.com/i/oaE2yWL.png"
+      type="image/x-icon"
+    />
   </head>
 
   <body>
     <header>
-      <div class="header-content">
+      <section class="header-content">
         <img src="./img//logo-m3.png" alt="Logo" />
         <div class="carrinho sidebar-social">
           <img
@@ -19,55 +30,54 @@
             alt="carrinho"
             class="cart"
           />
-          <span
+          <div
             id="cart_menu_num"
             data-action="cart-can"
             class="badge rounded-circle"
-            >0</span
           >
-        </div>
-      </div>
-    </header>
-
-    <div>
-      <div class="top">
-        <h2>Blusas</h2>
-
-        <div class="select-wrapper desktop">
-          <div class="select">
-            <div class="select__trigger">
-              <span>Ordenar por :</span>
-              <div class="arrow"></div>
-            </div>
-            <div class="custom-options">
-              <span class="custom-option selected" data-value="recente"
-                >Mais recente</span
-              >
-              <span class="custom-option" data-value="big-price"
-                >Maior preço</span
-              >
-              <span class="custom-option" data-value="low-price"
-                >Menor preço</span
-              >
-            </div>
+            0
           </div>
         </div>
+      </section>
+    </header>
 
-        <div class="filter-options mobile">
-          <button class="filter-option order-btn">Ordenar</button>
-          <button class="filter-option filter-btn">Filtrar</button>
+    <section class="top">
+      <h2>Blusas</h2>
+
+      <article class="select-wrapper desktop">
+        <div class="select">
+          <div class="select__trigger">
+            <span>Ordenar por :</span>
+            <div class="arrow"></div>
+          </div>
+          <div class="custom-options">
+            <span class="custom-option selected" data-value="recente"
+              >Mais recente</span
+            >
+            <span class="custom-option" data-value="big-price"
+              >Maior preço</span
+            >
+            <span class="custom-option" data-value="low-price"
+              >Menor preço</span
+            >
+          </div>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <main class="body">
-      <div class="filtrar wrapper mobile">
+      <article class="filter-options mobile">
+        <button class="filter-option order-btn">Ordenar</button>
+        <button class="filter-option filter-btn">Filtrar</button>
+      </article>
+    </section>
+
+    <main>
+      <section class="filtrar wrapper mobile">
         <div class="wrap-header">
           <h2>Filtrar</h2>
           <h2 class="wrap-close">x</h2>
         </div>
         <div class="wrap-filter-body">
-          <form id="filter-form" accept-charset="utf-8">
+          <form id="filter-form-mobile" accept-charset="utf-8">
             <details>
               <summary>CORES</summary>
 
@@ -241,13 +251,13 @@
                 </div>
               </div>
             </details>
-            <div class="form-buttons">
+            <article class="form-buttons">
               <button class="submit-button">APLICAR</button>
               <input type="reset" name="reset" id="reset" value="LIMPAR" />
-            </div>
+            </article>
           </form>
         </div>
-      </div>
+      </section>
 
       <div class="ordenar wrapper mobile">
         <div class="wrap-header">
@@ -261,9 +271,9 @@
         </div>
       </div>
 
-      <div class="filter-desktop desktop">
-        <form id="filter-form" accept-charset="utf-8">
-          <div class="filter-option-content option-margin filter-cores">
+      <section class="filter-desktop desktop">
+        <form id="filter-form-desktop" accept-charset="utf-8">
+          <article class="filter-option-content option-margin filter-cores">
             <h3 class="filter-sub desktop">CORES</h3>
             <div class="color-option">
               <input type="checkbox" name="cor" value="Amarelo" id="Amarelo" />
@@ -310,13 +320,13 @@
               <input type="checkbox" name="cor" value="Vinho" id="Vinho" />
               <label for="Vinho">Vinho</label>
             </div>
-          </div>
-          <div class="show-colors">
+          </article>
+          <article class="show-colors">
             <h3>Ver todas as cores</h3>
             <span>v</span>
-          </div>
-          <div class="filter-option-content">
-            <div id="input-option356" class="radio-container option-margin">
+          </article>
+          <article class="filter-option-content">
+            <div class="radio-container option-margin">
               <h3 class="filter-sub desktop">TAMANHO</h3>
               <div class="radio">
                 <label>
@@ -367,8 +377,8 @@
                 </label>
               </div>
             </div>
-          </div>
-          <div class="filter-option-content option-margin">
+          </article>
+          <article class="filter-option-content option-margin">
             <h3 class="filter-sub desktop">FAIXA DE PREÇO</h3>
             <div class="option">
               <input type="checkbox" name="price-range" value="0 50" id="050" />
@@ -410,15 +420,24 @@
               />
               <label for="50000">a partir de R$500</label>
             </div>
-          </div>
-          <div class="form-buttons">
+          </article>
+          <article class="form-buttons">
             <input type="submit" name="submit" id="submit" value="APLICAR" />
             <input type="reset" name="reset" id="reset" value="LIMPAR" />
-          </div>
+          </article>
         </form>
+      </section>
+
+      <div class="cart-background">
+        <section id="cart-container">
+          <div class="cart-wrap-header">
+            <h2>CART</h2>
+            <h2 class="wrap-close">x</h2>
+          </div>
+        </section>
       </div>
 
-      <template id="tmp">
+      <template id="tmp-products">
         <div class="product">
           <div class="img-prod">
             <img src="" alt="" />
@@ -429,6 +448,24 @@
             <span></span>
           </div>
           <button class="product-button">COMPRAR</button>
+        </div>
+      </template>
+
+      <template id="tmp-cart">
+        <div class="cart-product">
+          <div class="img-prod">
+            <img src="" alt="" />
+          </div>
+          <div class="cart-details-prod">
+            <p></p>
+            <h3></h3>
+            <span></span>
+          </div>
+          <div class="count-container">
+            <button class="diminuir">-</button>
+            <div>1</div>
+            <button class="acrecentar">+</button>
+          </div>
         </div>
       </template>
 

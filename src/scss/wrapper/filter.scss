@@ -198,4 +198,8 @@ input[type="checkbox"]:not(old):checked + label:before {
   .filter-cores-open {
     height: 100%;
   }
+
+.radio-container {
+  width: 50%;
+}
 }

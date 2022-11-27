@@ -56,9 +56,9 @@ export const dataFilter = () => {
   }
 };
 
-export const colorFilter = () => {
+export const colorFilter = (form) => {
   let pr = d.querySelectorAll(".product:not( .filter )"),
-    myForm = document.getElementById("filter-form"),
+    myForm = document.getElementById(form),
     formData = new FormData(myForm),
     selectedColor = [],
     selectedSize = [],

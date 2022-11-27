@@ -2,6 +2,7 @@
 @import "footer";
 @import "select";
 @import "carrinho";
+@import "cart";
 
 body {
   font: menu;
@@ -9,12 +10,6 @@ body {
   line-height: 1.4;
   padding: 0;
   margin: 0;
-}
-
-section {
-  padding-top: 4rem;
-  width: 50%;
-  margin: auto;
 }
 
 .carregar-mais {
@@ -28,7 +23,7 @@ section {
   color: white;
 }
 
-.body {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,7 +180,7 @@ details p {
     align-items: center;
   }
 
-  .body {
+  main {
     display: flex !important;
     flex-direction: row;
     align-items: start;

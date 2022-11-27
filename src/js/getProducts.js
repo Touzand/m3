@@ -1,7 +1,7 @@
 import { priceFormat } from "./helpers";
 
 let d = document;
-const $template = d.getElementById("tmp").content,
+const $template = d.getElementById("tmp-products").content,
   $productContainer = d.querySelector(".products-container"),
 $fragment = d.createDocumentFragment();
 
